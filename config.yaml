@@ -1,0 +1,8 @@
+product_url: "https://example.com/product"
+monitor_interval: 10
+notification:
+  email: "recipient_email@gmail.com"
+  smtp_server: "smtp.gmail.com"
+  smtp_port: 587
+  sender_email: "your_email@gmail.com"
+  sender_password: "your_password"
