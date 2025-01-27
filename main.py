@@ -1,6 +1,6 @@
-from app.monitor import ProductMonitor
-from app.notify import Notifier
-from app.checkout import CheckoutHandler
+from monitor import ProductMonitor
+from notify import Notifier
+from checkout import CheckoutHandler
 
 def main():
     product_url = "https://example.com/product"
