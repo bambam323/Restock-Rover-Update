@@ -3,7 +3,7 @@ from notify import Notifier
 from checkout import CheckoutHandler
 
 def main():
-    product_url = "https://example.com/product"
+    product_url = "https://www.target.com/p/pok-233-mon-trading-card-game-scarlet-38-violet-prismatic-evolutions-booster-bundle/-/A-93954446#lnk=sametab"
     monitor_interval = 10  # Check every 10 seconds
 
     monitor = ProductMonitor(product_url, monitor_interval)
