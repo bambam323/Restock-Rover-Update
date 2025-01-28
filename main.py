@@ -1,7 +1,7 @@
 from flask import Flask, request
 from monitor import ProductMonitor
 from notify import Notifier
-from checkout import CheckoutHandler
+from checkout import CheckoutHandler  # Updated CheckoutHandler with Selenium
 import threading
 import time
 
@@ -9,6 +9,8 @@ app = Flask(__name__)
 
 # Define the product monitor and handlers
 product_url = "https://www.target.com/p/pok-233-mon-trading-card-game-scarlet-38-violet-prismatic-evolutions-booster-bundle/-/A-93954446#lnk=sametab"
+login_url = "https://www.target.com/login"  # Add the login URL
+shipping_address = "123 Main Street, Your City, Your Country"  # Update this with your address
 monitor_interval = 10  # Check every 10 seconds
 monitor = ProductMonitor(product_url, monitor_interval)
 notifier = Notifier()
@@ -21,7 +23,8 @@ def monitor_product():
         if monitor.is_in_stock():
             print("Product is back in stock!")
             notifier.send_notification("Product is in stock! Starting checkout...")
-            checkout.automate_checkout()
+            # Pass the necessary arguments to automate_checkout
+            checkout.automate_checkout(product_url, login_url, shipping_address)
             break
         time.sleep(monitor_interval)
 
