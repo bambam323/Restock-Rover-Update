@@ -17,5 +17,5 @@ class ProductMonitor:
                 return True
             time.sleep(self.interval)
         except Exception as e:
-            print(f"Error checking stock: {e}")
+            print("Error checking stock: {e}")
         return False
