@@ -10,5 +10,8 @@ COPY . /app
 # Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Expose the port Cloud Run uses
+EXPOSE 8080
+
 # Command to run your application
 CMD ["python", "main.py"]
