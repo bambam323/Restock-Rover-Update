@@ -18,4 +18,4 @@ class CheckoutHandler:
             else:
                 print("Failed to complete checkout.")
         except Exception as e:
-            print(f"Checkout error: {e}")
+            print("Checkout error: {e}")
